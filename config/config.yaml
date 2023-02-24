@@ -6,5 +6,5 @@ mysql:
   passwd: test
 
 redis:
-  addr: redis.test.com:2307
-  passwd: 123456
+  addr: redis.test.com:6379
+  passwd: 

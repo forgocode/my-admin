@@ -1,7 +1,11 @@
 package v1
 
-import "github.com/gin-gonic/gin"
+import (
+	"my-admin/pkg/response"
 
-func TestRespose(c *gin.Context) {
-	c.JSON(200, "test successfully!")
+	"github.com/gin-gonic/gin"
+)
+
+func TestRespose(ctx *gin.Context) {
+	response.Success(ctx, "test successfully")
 }

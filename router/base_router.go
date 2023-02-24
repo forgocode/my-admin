@@ -2,13 +2,9 @@ package router
 
 import (
 	v1 "my-admin/api/v1"
-
-	"github.com/gin-gonic/gin"
 )
 
-type BaseRouter struct{ gin.RouterGroup }
-
-func (r *BaseRouter) InitRouter() {
+func (r *Router) InitBaseRouter() {
 	userGroup := r.Group("user")
 	userGroup.Use()
 	//TODO:test need delete
@@ -16,5 +12,6 @@ func (r *BaseRouter) InitRouter() {
 
 	userGroup.POST("/register", v1.Register)
 	userGroup.POST("/login", v1.Login)
+	userGroup.GET("/log")
 
 }
